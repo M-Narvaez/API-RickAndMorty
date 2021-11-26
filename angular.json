@@ -103,6 +103,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/RickAndMorty",
+            "netlifyToken": "nj8ouQFkOiWIiaFynYbDg2sKNVFRywKMwO4t2m79fgo",
+            "siteId": "eb749503-d73b-46aa-b3b1-d9855cfe39cb"
+          }
         }
       }
     }
