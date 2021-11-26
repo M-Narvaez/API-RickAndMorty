@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let personaje of personajes">
+        <div class="card">
+            <div class="image">
+                <a href = "detalles-personaje/{{personaje.id}}">
+                    <img 
+                    [src]="personaje.image" 
+                    [alt]="personaje.name" 
+                    class="card-img-top">
+                </a>
+            </div>
+            <div class="card-inner">
+                <div class="header">
+                    <h2>{{personaje.name | slice: 0:16}}</h2>
+                    <h4 class="text-muted">{{personaje.gender}}</h4>
+                    <small class="text-muted">{{personaje.created | date}}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

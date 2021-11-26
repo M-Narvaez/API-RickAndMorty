@@ -1,0 +1,22 @@
+<div class="row" *ngIf="personaje$ | async as personaje">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card">
+            <div class="image">
+                    <img 
+                    [src]="personaje.image" 
+                    [alt]="personaje.name" 
+                    class="card-img-top">
+            </div>
+            <div class="card-inner">
+                <div class="header">
+                        <h2>{{personaje.name}}</h2>
+                        <h4 class="text-muted">{{personaje.species}}</h4>
+                        <h4 class="text-muted">{{personaje.gender}}</h4>
+                        <h4 class="text-muted">{{personaje.status}}</h4>
+                        <small class="text-muted">{{personaje.created}}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button (click)="onVolver()" class="btn btn-dark">Volver</button>
+</div>
